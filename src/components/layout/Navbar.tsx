@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
-import { OpenObsLogo } from '@/components/ui/OpenObsLogo'
+import { RoundsLogo } from '@/components/ui/RoundsLogo'
 import { GithubIcon } from '@/components/ui/GithubIcon'
 import { NAV_LINKS, GITHUB_URL } from '@/lib/constants'
 
@@ -26,8 +26,8 @@ export function Navbar() {
       <div className="max-w-[1200px] mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3 text-[1.35rem] font-semibold tracking-tight">
-          <OpenObsLogo size={36} />
-          OpenObs
+          <RoundsLogo size={36} />
+          Rounds
         </a>
 
         {/* Desktop links */}

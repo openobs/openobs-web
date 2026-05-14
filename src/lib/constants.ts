@@ -1,9 +1,9 @@
-export const GITHUB_URL = 'https://github.com/openobs/openobs'
-export const DOCS_URL = 'https://docs.openobs.com'
+export const GITHUB_URL = 'https://github.com/syntropize-ai/rounds'
+export const DOCS_URL = 'https://docs.rounds.dev'
 
 export const NAV_LINKS = [
   { label: 'Features', href: '#features' },
-  { label: 'Loop', href: '#architecture' },
+  { label: 'Workflow', href: '#workflow' },
   { label: 'Get Started', href: '#get-started' },
   { label: 'Docs', href: DOCS_URL },
   { label: 'FAQ', href: '#faq' },
@@ -13,14 +13,14 @@ export const FEATURES = [
   {
     title: 'Observe',
     description:
-      'Create, edit, clone, explain, and delete dashboards from natural language. OpenObs discovers real metrics and validates every query.',
+      'Create, open, edit, explain, and organize dashboards from natural language. Rounds discovers real metrics and validates queries before saving.',
     icon: 'layout-dashboard',
     color: 'red' as const,
   },
   {
     title: 'Detect',
     description:
-      'Create and tune alert rules through chat. When an alert fires, start an investigation from the alert context.',
+      'Create and tune alert rules through chat or the Alerts page. When a rule fires, start an investigation from the alert context.',
     icon: 'bell',
     color: 'orange' as const,
   },
@@ -34,65 +34,65 @@ export const FEATURES = [
   {
     title: 'Act safely',
     description:
-      'OpenObs can propose fixes. Mutating cluster operations become approval requests with RBAC and audit logging before execution.',
+      'Review risky work in Action Center. Mutating cluster operations become approval requests with RBAC and audit logging before execution.',
     icon: 'shield-check',
     color: 'green' as const,
   },
   {
-    title: 'Enterprise controls',
+    title: 'Workspace controls',
     description:
-      'Grafana-like RBAC, service accounts, audit logs, and approval workflows are built into the open-source project.',
+      'Folders, service accounts, teams, roles, audit logs, setup, settings, and connector policies are part of the product.',
     icon: 'puzzle',
     color: 'cyan' as const,
   },
   {
-    title: 'Transparent agents',
+    title: 'Persistent sessions',
     description:
-      'Watch tool calls, intermediate evidence, and final reports stream live instead of trusting a black-box answer.',
+      'Continue work from Recents, keep resource context after navigation, and review compact activity steps when you need details.',
     icon: 'activity',
     color: 'violet' as const,
   },
 ] as const
 
 export const AGENTS = [
-  { name: 'Observe', desc: 'Dashboards', color: 'sp-red' },
-  { name: 'Detect', desc: 'Alerts', color: 'sp-orange' },
-  { name: 'Investigate', desc: 'Evidence', color: 'sp-yellow' },
-  { name: 'Approve', desc: 'Fixes', color: 'sp-green' },
-  { name: 'Govern', desc: 'RBAC', color: 'sp-cyan' },
-  { name: 'Extend', desc: 'Adapters', color: 'sp-violet' },
+  { name: 'Chat', desc: 'Ask, open, create', color: 'sp-red' },
+  { name: 'Dashboards', desc: 'Panels and folders', color: 'sp-orange' },
+  { name: 'Alerts', desc: 'Rules and state', color: 'sp-yellow' },
+  { name: 'Investigations', desc: 'Evidence reports', color: 'sp-green' },
+  { name: 'Actions', desc: 'Approvals', color: 'sp-cyan' },
+  { name: 'Admin', desc: 'RBAC and settings', color: 'sp-violet' },
 ] as const
 
 export const FAQ_ITEMS = [
   {
-    question: 'What data sources does OpenObs support?',
+    question: 'What data sources does Rounds support?',
     answer:
-      'OpenObs supports Prometheus-compatible metrics, Loki-style logs, and Kubernetes operations connectors. The adapter SDK is designed for adding more telemetry, cloud, and internal systems.',
+      'Rounds supports Prometheus-compatible metrics, Loki logs, Kubernetes operations connectors, manual change events, notifications, and LLM providers. More integrations are planned.',
   },
   {
-    question: 'How does OpenObs avoid hallucinated queries?',
+    question: 'How does Rounds avoid hallucinated queries?',
     answer:
-      'OpenObs follows a "discovery-first" approach. Before generating any dashboard or alert, the Discovery Agent queries your actual data sources to find real metrics. The Verification Agent then validates every generated PromQL query against your Prometheus instance before returning results.',
+      'Rounds follows a discovery-first approach. Before generating dashboards or alerts, it queries configured connectors for real metrics and labels, then validates generated PromQL before saving.',
   },
   {
-    question: 'What makes OpenObs different from an observability chatbot?',
+    question: 'What makes Rounds different from an observability chatbot?',
     answer:
-      'The product is built around the SRE loop: observe, detect, investigate, and act safely. OpenObs can create dashboards, create alerts, investigate incidents with evidence, and route risky cluster fixes through approval.',
+      'Rounds is a workspace, not just a chat box. It creates and opens dashboards, manages alert rules, writes evidence-backed investigations, tracks feed items, and routes risky fixes through approvals.',
   },
   {
     question: 'Which LLM providers are supported?',
     answer:
-      'OpenObs supports Anthropic, OpenAI, Gemini, DeepSeek, Ollama, Azure OpenAI, Bedrock, and OpenAI-compatible APIs through the LLM gateway.',
+      'Rounds supports Anthropic, OpenAI, Gemini, DeepSeek, Ollama, Azure OpenAI, Bedrock, and OpenAI-compatible APIs through the LLM gateway.',
   },
   {
-    question: 'Is OpenObs production-ready?',
+    question: 'Is Rounds production-ready?',
     answer:
-      'OpenObs is under active development. It includes built-in safety features like dry-run execution, approval workflows, query validation, and permission modes. We recommend starting with read-only mode and gradually enabling more capabilities as you gain confidence.',
+      'Rounds is under active development. It includes built-in safety features like dry-run execution, approval workflows, query validation, and permission modes. We recommend starting with read-only mode and gradually enabling more capabilities as you gain confidence.',
   },
   {
-    question: 'Can I self-host OpenObs?',
+    question: 'Can I self-host Rounds?',
     answer:
-      'Yes. OpenObs is fully self-hosted. A single command starts the API gateway and web dashboard. It uses SQLite by default (no external database required), with optional PostgreSQL support for larger deployments. Redis is needed only if you use the job queue features.',
+      'Yes. Rounds is self-hosted. A single command starts the API gateway and web dashboard. It uses SQLite by default, with PostgreSQL recommended for production Kubernetes installs.',
   },
   {
     question: 'How do I contribute?',
@@ -106,10 +106,9 @@ export const TECH_STACK = [
   'React',
   'Node.js',
   'Express',
-  'Socket.IO',
-  'Drizzle ORM',
+  'Vite',
+  'Prometheus',
   'Tailwind CSS',
   'OpenTelemetry',
 ] as const
-
 
