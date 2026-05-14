@@ -21,36 +21,38 @@ const STEPS: Step[] = [
   {
     num: '01',
     title: 'Install from npm',
-    description: 'OpenObs ships as a single self-contained npm package. Node.js 20+ is the only prerequisite.',
+    description: 'Rounds ships as a single self-contained npm package. Node.js 20+ is the only prerequisite.',
     helmNote: {
       prefix: ' Running on Kubernetes? Install with the official ',
       linkText: 'Helm chart',
-      href: 'https://docs.openobs.com/install/kubernetes',
+      href: 'https://docs.rounds.dev/install/kubernetes',
       suffix: ' instead.',
     },
-    code: `$ npm install -g openobs`,
+    code: `$ npm install -g @syntropize/rounds`,
     codeTitle: 'terminal',
   },
   {
     num: '02',
     title: 'Launch',
     description: 'A single command starts the API gateway and the web dashboard on :3000.',
-    code: `$ openobs
+    code: `$ rounds
 
-✓ OpenObs listening on :3000
+✓ Rounds listening on :3000
 ✓ Opening setup wizard in your browser...`,
     codeTitle: 'terminal',
   },
   {
     num: '03',
     title: 'Connect your stack',
-    description: 'The setup wizard walks you through picking an LLM provider and pointing OpenObs at your Prometheus. No config files required.',
+    description: 'The setup wizard walks you through the first admin, LLM provider, connectors, and notifications. No config files required.',
     code: `# The wizard captures everything interactively:
 #   • LLM provider (Anthropic, OpenAI, Gemini, DeepSeek, Ollama, ...)
-#   • Prometheus URL (optional — dashboards work without it)
 #   • First admin account
+#   • LLM provider
+#   • Prometheus-compatible metrics connector
+#   • Optional Loki, Kubernetes, and notifications
 #
-# Secrets land encrypted in ~/.openobs/ on your laptop.`,
+# Secrets land encrypted in ~/.rounds/ on your laptop.`,
     codeTitle: 'setup wizard',
   },
 ]

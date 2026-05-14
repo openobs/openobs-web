@@ -1,11 +1,11 @@
-import { OpenObsLogo } from '@/components/ui/OpenObsLogo'
+import { RoundsLogo } from '@/components/ui/RoundsLogo'
 import { GithubIcon } from '@/components/ui/GithubIcon'
 import { DOCS_URL, GITHUB_URL } from '@/lib/constants'
 
 const FOOTER_LINKS = {
   Product: [
     { label: 'Features', href: '#features' },
-    { label: 'Architecture', href: '#architecture' },
+    { label: 'Workflow', href: '#workflow' },
     { label: 'Get Started', href: '#get-started' },
     { label: 'FAQ', href: '#faq' },
   ],
@@ -31,11 +31,11 @@ export function Footer() {
           {/* Brand column */}
           <div className="md:col-span-4">
             <a href="#" className="flex items-center gap-2.5 text-lg font-semibold tracking-tight mb-4">
-              <OpenObsLogo size={24} />
-              OpenObs
+              <RoundsLogo size={24} />
+              Rounds
             </a>
             <p className="text-sm text-text-secondary leading-relaxed mb-6 max-w-[280px]">
-              Open-source AI SRE loop for dashboards, alerts, investigations, and approval-gated fixes.
+              Open-source AI SRE workspace for dashboards, alerts, investigations, feed items, and approval-gated fixes.
             </p>
             <a
               href={GITHUB_URL}
@@ -78,7 +78,7 @@ export function Footer() {
         <div className="max-w-[1200px] mx-auto px-6 lg:px-10 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-3 font-mono text-[0.7rem] text-text-muted">
             <span className="w-2 h-2 bg-accent" />
-            OpenObs &mdash; MIT License &mdash; {new Date().getFullYear()}
+            Rounds &mdash; MIT License &mdash; {new Date().getFullYear()}
           </div>
           <div className="font-mono text-[0.65rem] text-text-muted">
             Built with care by the community
@@ -88,5 +88,4 @@ export function Footer() {
     </footer>
   )
 }
-
 

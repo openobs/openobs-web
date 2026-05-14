@@ -44,7 +44,7 @@ export function Demo() {
               with evidence
             </h2>
             <p className="text-text-secondary text-[1.05rem] mb-8 max-w-[440px] leading-relaxed">
-              OpenObs does not stop at a chat answer. It gathers telemetry,
+              Rounds does not stop at a chat answer. It gathers telemetry,
               checks cluster state, writes an investigation report, and gates
               risky actions behind approval.
             </p>
@@ -92,7 +92,7 @@ export function Demo() {
               <span className="w-2.5 h-2.5 rounded-full bg-border-light" />
               <span className="w-2.5 h-2.5 rounded-full bg-border-light" />
               <span className="flex-1 text-center text-[0.7rem] text-text-muted">
-                openobs — session
+                rounds — session
               </span>
             </div>
 

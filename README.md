@@ -1,10 +1,10 @@
-# OpenObs Website
+# Rounds Website
 
-Marketing site for OpenObs, an open-source observability experience focused on AI-native workflows, dashboard generation, and alerting from natural language.
+Marketing site for Rounds, an open-source AI SRE workspace for dashboards, alerts, investigations, approvals, and connector-backed operations from natural language.
 
 ## What this repo contains
 
-- The public website / landing page for OpenObs
+- The public website / landing page for Rounds
 - A static React + Vite frontend that can be deployed on GitHub Pages
 - GitHub Actions workflow for automatic Pages deployment
 
@@ -75,9 +75,8 @@ For a root-domain deployment, the base path should remain `/`.
 
 ## Contributing
 
-Issues and pull requests are welcome. If you are changing layout, copy, or brand presentation, try to preserve the overall OpenObs voice and product direction.
+Issues and pull requests are welcome. If you are changing layout, copy, or brand presentation, keep the copy aligned with the Rounds product direction.
 
 ## License
 
 No license has been added yet. Until a license is published, all rights are reserved by default.
-

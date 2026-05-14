@@ -1,12 +1,12 @@
-# Contributing to OpenObs Website
+# Contributing to Rounds Website
 
-Thanks for helping improve the OpenObs website.
+Thanks for helping improve the Rounds website.
 
 ## Before you start
 
 - Open an issue first for larger changes in content, structure, or brand direction.
 - Keep pull requests focused. Small, isolated changes are easier to review and ship.
-- If you are changing product messaging, keep the copy aligned with the OpenObs positioning already used across the site.
+- If you are changing product messaging, keep the copy aligned with the Rounds positioning already used across the site.
 
 ## Local development
 
@@ -45,4 +45,4 @@ Good contributions for this repository include:
 - responsive layout fixes
 - GitHub Pages / deployment fixes
 
-If a change belongs in the main OpenObs product rather than the marketing site, it should usually go in the product repository instead of this one.
+If a change belongs in the main Rounds product rather than the marketing site, it should usually go in the product repository instead of this one.

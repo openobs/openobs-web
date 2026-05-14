@@ -5,8 +5,8 @@ import { GithubIcon } from '@/components/ui/GithubIcon'
 import { GITHUB_URL } from '@/lib/constants'
 
 const INSTALL_COMMANDS = [
-  { label: 'npm', cmd: 'npm install -g openobs && openobs' },
-  { label: 'helm', cmd: 'helm install openobs oci://ghcr.io/openobs/charts/openobs' },
+  { label: 'npm', cmd: 'npm install -g @syntropize/rounds && rounds' },
+  { label: 'helm', cmd: 'helm install rounds oci://ghcr.io/syntropize/charts/rounds' },
 ]
 
 const container = {
@@ -77,7 +77,7 @@ export function Hero() {
             className="text-lg text-text-secondary leading-relaxed max-w-[560px] mb-10"
           >
             Observe with dashboards, detect with alerts, investigate with evidence,
-            and approve safe fixes from natural language.
+            review approvals, and manage your observability workspace from natural language.
           </motion.p>
 
           {/* CTA Buttons */}

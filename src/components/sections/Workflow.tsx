@@ -12,8 +12,8 @@ const AGENT_BORDER_COLORS: Record<string, string> = {
   'sp-violet': 'border-b-accent',
 }
 
-const INTERFACES = ['Web Dashboard', 'REST API', 'WebSocket']
-const INFRA = ['Prometheus', 'Logs', 'Kubernetes', 'Custom Adapters']
+const INTERFACES = ['Home Chat', 'Dashboards', 'Alerts', 'Investigations']
+const INFRA = ['Prometheus', 'Loki', 'Kubernetes', 'Notifications']
 
 function Connector() {
   return (
@@ -35,23 +35,23 @@ function FanOut() {
   )
 }
 
-export function Architecture() {
+export function Workflow() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="architecture" className="relative py-32">
+    <section id="workflow" className="relative py-32">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[min(80%,900px)] h-px bg-border" />
 
       <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
         <div className="text-center mb-16">
-          <SectionLabel>Architecture</SectionLabel>
+          <SectionLabel>Workflow</SectionLabel>
           <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight mb-4">
-            Built for controlled autonomy
+            Built for the way operators work
           </h2>
           <p className="text-text-secondary text-lg max-w-[520px] mx-auto">
-            Agents can investigate across systems, but permissions, RBAC, and approval
-            gates decide what they are allowed to change.
+            Start in chat, open the resource, keep the same session alive, and
+            route risky changes through review instead of silent automation.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export function Architecture() {
           {/* Interface layer */}
           <div className="mb-2">
             <div className="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-text-muted mb-2 pl-1">
-              Interface
+              Product surface
             </div>
             <div className="flex justify-center gap-2">
               {INTERFACES.map((name) => (
@@ -84,14 +84,14 @@ export function Architecture() {
           {/* Orchestrator */}
           <div className="mb-2">
             <div className="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-text-muted mb-2 pl-1">
-              Orchestration
+              Session loop
             </div>
             <div className="flex justify-center">
               <div className="px-6 py-3 bg-bg-secondary border border-accent text-center relative overflow-hidden">
                 <div className="relative">
-                  <div className="text-[0.9rem] font-medium">Orchestrator Agent</div>
+                  <div className="text-[0.9rem] font-medium">Rounds session</div>
                   <div className="font-mono text-[0.65rem] text-text-muted mt-0.5">
-                    plan, tool routing, policy checks
+                    chat, tools, navigation, resource context
                   </div>
                 </div>
               </div>
@@ -103,7 +103,7 @@ export function Architecture() {
           {/* Specialized agents */}
           <div className="mb-2">
             <div className="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-text-muted mb-2 pl-1">
-              Specialized Agents
+              User workflows
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
               {AGENTS.map((agent) => (
@@ -124,7 +124,7 @@ export function Architecture() {
           {/* Infrastructure */}
           <div>
             <div className="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-text-muted mb-2 pl-1">
-              Infrastructure Adapters
+              Connectors
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
               {INFRA.map((name) => (
